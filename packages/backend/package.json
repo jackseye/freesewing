@@ -19,6 +19,7 @@
     "major": "npm version major -m ':bookmark: v%s' && npm run build",
     "test": "SEND_TEST_EMAILS=0 ./node_modules/.bin/mocha tests/index.js",
     "testall": "SEND_TEST_EMAILS=1 ./node_modules/.bin/mocha tests/index.js",
+    "test-with-test-server": "babel-node --presets '@babel/preset-env' scripts/test-with-test-server.js",
     "clean": "rimraf dist",
     "prettier": "npx prettier --write 'src/**' 'tests/**'",
     "lint": "eslint --fix \"src/*.js\"",
@@ -88,6 +89,7 @@
   },
   "devDependencies": {
     "backpack-core": "0.7.0",
+    "mongodb-memory-server": "^8.3.0",
     "prettier": "^2.3.1"
   }
 }
